@@ -81,8 +81,15 @@
 
 (def classes
   `{:all [clojure.lang.ArityException
+          clojure.lang.APersistentMap
+          clojure.lang.APersistentMap$KeySeq
+          clojure.lang.APersistentMap$ValSeq
+          clojure.lang.ASeq
           clojure.lang.BigInt
           clojure.lang.ExceptionInfo
+          clojure.lang.LazySeq
+          clojure.lang.PersistentVector
+          clojure.lang.StringSeq
           java.io.BufferedReader
           java.io.BufferedWriter
           java.io.ByteArrayInputStream
@@ -112,6 +119,7 @@
           java.lang.Exception
           java.lang.Float
           java.lang.Integer
+          java.lang.Iterable
           java.lang.Long
           java.lang.Number
           java.lang.NumberFormatException
@@ -231,6 +239,7 @@
 
     :fields [clojure.lang.PersistentQueue]
     :instance-checks [clojure.lang.IObj
+                      clojure.lang.IChunkedSeq
                       clojure.lang.IFn
                       clojure.lang.IPending
                       clojure.lang.IDeref
@@ -241,8 +250,12 @@
                       clojure.lang.IPersistentSet
                       clojure.lang.IPersistentVector
                       clojure.lang.IRecord
+                      clojure.lang.IReduce
+                      clojure.lang.IReduceInit
+                      clojure.lang.IRef
                       clojure.lang.ISeq
                       clojure.lang.Named
+                      clojure.lang.Namespace
                       clojure.lang.Keyword
                       clojure.lang.Symbol
                       clojure.lang.Sequential
