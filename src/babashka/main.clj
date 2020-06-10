@@ -412,6 +412,7 @@ If neither -e, -f, or --socket-repl are specified, then the first argument that 
     Integer java.lang.Integer
     File java.io.File
     Float java.lang.Float
+    Iterable java.lang.Iterable
     Long java.lang.Long
     Math java.lang.Math
     Number java.lang.Number

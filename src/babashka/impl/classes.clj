@@ -80,7 +80,14 @@
                                         :parameterTypes ["java.lang.String","java.util.Locale","java.lang.ClassLoader"]}]})))
 
 (def classes
-  `{:all [clojure.lang.ExceptionInfo
+  `{:all [clojure.lang.APersistentMap
+          clojure.lang.APersistentMap$KeySeq
+          clojure.lang.APersistentMap$ValSeq
+          clojure.lang.ASeq
+          clojure.lang.ExceptionInfo
+          clojure.lang.LazySeq
+          clojure.lang.PersistentVector
+          clojure.lang.StringSeq
           java.io.BufferedReader
           java.io.BufferedWriter
           java.io.ByteArrayInputStream
@@ -110,6 +117,7 @@
           java.lang.Exception
           java.lang.Float
           java.lang.Integer
+          java.lang.Iterable
           java.lang.Long
           java.lang.Number
           java.lang.NumberFormatException
@@ -220,12 +228,15 @@
     :methods [borkdude.graal.LockFix ;; support for locking
               ]
     :fields [clojure.lang.PersistentQueue]
-    :instance-checks [clojure.lang.IObj
+    :instance-checks [clojure.lang.IChunkedSeq
+                      clojure.lang.IObj
                       clojure.lang.IEditableCollection
                       clojure.lang.IMapEntry
                       clojure.lang.IPersistentMap
                       clojure.lang.IPersistentVector
                       clojure.lang.IRecord
+                      clojure.lang.IReduce
+                      clojure.lang.IReduceInit
                       clojure.lang.ISeq
                       clojure.lang.Named
                       clojure.lang.Keyword
