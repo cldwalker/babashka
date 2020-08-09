@@ -56,4 +56,5 @@
                          org.clojure/data.generators {:mvn/version "1.0.0"}
                          honeysql {:mvn/version "1.0.444"}
                          minimallist {:mvn/version "0.0.1"}
-                         circleci/bond {:mvn/version "0.4.0"}}}}}
+                         circleci/bond {:mvn/version "0.4.0"}
+                         nilenso/honeysql-postgres {:mvn/version "0.2.6"}}}}}

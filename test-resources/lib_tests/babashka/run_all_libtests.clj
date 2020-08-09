@@ -11,6 +11,8 @@
     (swap! status (fn [status]
                     (merge-with + status (dissoc m :type))))))
 
+(test-namespaces 'honeysql-postgres.postgres-test)
+
 ;;;; clj-http-lite
 
 (require '[clj-http.lite.client :as client])
