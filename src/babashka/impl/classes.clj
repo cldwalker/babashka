@@ -103,6 +103,7 @@
           java.io.PushbackInputStream
           java.io.Reader
           java.io.SequenceInputStream
+          java.io.Serializable
           java.io.StringReader
           java.io.StringWriter
           java.io.Writer
@@ -258,25 +259,32 @@
                       ;; clojure.lang.IDeref
                       ;; clojure.lang.IAtom
                       clojure.lang.IEditableCollection
+                      clojure.lang.IHashEq
                       clojure.lang.IMapEntry
                       clojure.lang.ILookup
                       clojure.lang.IPersistentCollection
                       clojure.lang.IPersistentMap
                       clojure.lang.IPersistentSet
+                      clojure.lang.IPersistentStack
                       ;;clojure.lang.PersistentHashSet ;; temp for meander
                       clojure.lang.IPersistentVector
+                      clojure.lang.PersistentTreeMap
                       clojure.lang.IRecord
                       clojure.lang.IRef
                       clojure.lang.ISeq
                       clojure.lang.Iterate
                       clojure.lang.LazySeq
+                      clojure.lang.MapEquivalence
                       clojure.lang.Named
                       clojure.lang.Keyword
                       clojure.lang.Ratio
                       clojure.lang.Repeat
+                      clojure.lang.Reversible
+                      clojure.lang.SeqIterator
                       clojure.lang.Symbol
                       clojure.lang.Sequential
                       clojure.lang.Seqable
+                      clojure.lang.Sorted
                       java.util.List]
     :custom ~custom-map})
 

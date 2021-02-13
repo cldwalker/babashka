@@ -26,6 +26,15 @@
   ;; note: Clojure itself will handle checking metadata for impls
   (d/nav coll k v))
 
+;; kv-reduce
+(defmulti kv-reduce types/type-impl)
+
+(defmethod kv-reduce :sci.impl.protocols/reified [amap f init]
+  (prn :REIFIED))
+
+(defmethod kv-reduce :default [amap f init]
+  (prn :DEFAULT))
+
 ;;;; sci namespace
 (def protocols-ns (sci/create-ns 'clojure.core.protocols nil))
 
@@ -35,4 +44,7 @@
    'datafy (copy-var datafy protocols-ns)
    'Navigable (sci/new-var 'clojure.core.protocols/Navigable {:methods #{'nav}
                                                               :ns protocols-ns})
-   'nav (copy-var nav protocols-ns)})
+   'nav (copy-var nav protocols-ns)
+   'IKVReduce (sci/new-var 'clojure.core.protocols/IKVReduce {:methods #{'kv-reduce}
+                                                              :ns protocols-ns})
+   'kv-reduce (copy-var kv-reduce protocols-ns)})
